@@ -6,8 +6,8 @@ pipeline {
             steps {
                 echo 'Building... test'
                 script{
-                    def cs = load 'cowsay.groovy'
-                    cs.template("mu")
+                    cowsay = load 'cowsay.groovy'
+                    cowsay.template("mu")
                 }
             }
         }
