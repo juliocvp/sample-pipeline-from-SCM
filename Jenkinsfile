@@ -1,5 +1,3 @@
-// Jenkinsfile
-@Library('cowsay') _
 pipeline {
     agent any
 
@@ -11,8 +9,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing... prueba 2'
-                cowsay 'mu'
+                echo 'Testing...'
+                cs = load "./lib/cowsay.groovy"
+                cs.main("mu")
             }
         }
         stage('Deploy') {
