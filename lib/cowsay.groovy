@@ -17,9 +17,9 @@ def border(text, chr) {
  chr * (text.length() + 2)
 }
  
-if (args.length == 1) {
- text = args[0]
- println template(text)
-} else {
- println "Usage: cowsay [message]"
-}
+// if (args.length == 1) {
+//  text = args[0]
+//  println template(text)
+// } else {
+//  println "Usage: cowsay [message]"
+// }

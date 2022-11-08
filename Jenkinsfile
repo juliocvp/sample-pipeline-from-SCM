@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building... test'
                 script{
                     def cs = load "./lib/cowsay.groovy"
-                    cs.main(args:"mu")
+                    cs.template("mu")
                 }
             }
         }
