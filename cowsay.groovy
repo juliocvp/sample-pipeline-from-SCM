@@ -16,7 +16,7 @@ ${border(text, '-')}
 def border(text, chr) {
  chr * (text.length() + 2)
 }
- 
+return this
 // if (args.length == 1) {
 //  text = args[0]
 //  println template(text)
