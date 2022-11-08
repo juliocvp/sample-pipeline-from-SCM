@@ -5,13 +5,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building... test'
+                script{
+                    def cs = load "./lib/cowsay.groovy"
+                    cs.main("mu")
+                }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                def cs = load './lib/cowsay.groovy'
-                cs.main("mu")
             }
         }
         stage('Deploy') {
