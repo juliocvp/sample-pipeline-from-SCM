@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 script{
-                    cowsay.template("mu")
+                    template("mu")
                 }
             }
         }
