@@ -1,3 +1,4 @@
+@Library('cowsay')_
 pipeline {
     agent any
 
@@ -5,15 +6,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building... test'
-                script{
-                    cowsay = load 'cowsay.groovy'
-                    cowsay.template("mu")
-                }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
+                template("mu")
             }
         }
         stage('Deploy') {
