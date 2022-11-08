@@ -6,14 +6,15 @@ pipeline {
             steps {
                 echo 'Building... test'
                 script{
-                    cowsay = load 'cowsay.groovy'
+                    cowsay = load 'lib/cowsay.groovy'
+                    text = cowsay.template("mu")
+                    echo text
                 }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                cowsay.template("mu")
             }
         }
         stage('Deploy') {
