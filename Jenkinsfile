@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                cs = load './lib/cowsay.groovy'
+                def cs = load './lib/cowsay.groovy'
                 cs.main("mu")
             }
         }
