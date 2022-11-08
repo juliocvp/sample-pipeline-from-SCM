@@ -13,7 +13,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                cowsay.template("mu")
+                script{
+                    cowsay.template("mu")
+                }
             }
         }
         stage('Deploy') {
