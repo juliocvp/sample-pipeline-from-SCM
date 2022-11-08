@@ -1,3 +1,5 @@
+// Jenkinsfile
+@Library('cowsay') _
 pipeline {
     agent any
 
@@ -10,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing... prueba 2'
+                cowsay 'mu'
             }
         }
         stage('Deploy') {
