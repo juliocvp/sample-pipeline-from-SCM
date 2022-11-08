@@ -7,13 +7,13 @@ pipeline {
                 echo 'Building... test'
                 script{
                     cowsay = load 'cowsay.groovy'
-                    cowsay.template("mu")
                 }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
+                cowsay.template("mu")
             }
         }
         stage('Deploy') {
